@@ -85,10 +85,17 @@
     "questions": {
       "type": "array",
       "items": { "type": "string" }
-    }
+    },
+    "status": { "type": "string" }
   },
   "required": [
-    "full_name", "experience", "certifications_or_licenses",
-    "education", "skills", "feedback", "questions"
+    "full_name",
+    "experience",
+    "certifications_or_licenses",
+    "education",
+    "skills",
+    "feedback",
+    "questions",
+    "status"
   ]
 }
