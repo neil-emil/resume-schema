@@ -1,58 +1,94 @@
 {
-  "full_name": "",
-  "experience": [
-    {
-      "job_title": "",
-      "employer": "",
-      "unit_or_facility_type": "",
-      "start_date": "",
-      "end_date": "",
-      "location": "",
-      "duties": "",
-      "ai_draft_duties": [
-        "Bullet 1",
-        "Bullet 2",
-        "Bullet 3"
-      ],
-      "feedback": "What was unclear, inferred, missing, or notable",
-      "questions": [
-        "Can you confirm the start and end dates for this role?",
-        "What type of patients did you work with?"
-      ],
-      "status": "Urgent Problems"
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Healthcare Resume Parser Schema",
+  "type": "object",
+  "properties": {
+    "full_name": { "type": "string" },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "job_title": { "type": "string" },
+          "employer": { "type": "string" },
+          "unit_or_facility_type": { "type": "string" },
+          "start_date": { "type": "string" },
+          "end_date": { "type": "string" },
+          "location": { "type": "string" },
+          "duties": { "type": "string" },
+          "ai_draft_duties": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "feedback": { "type": "string" },
+          "questions": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "status": { "type": "string" }
+        },
+        "required": [
+          "job_title", "employer", "unit_or_facility_type",
+          "start_date", "end_date", "location",
+          "duties", "ai_draft_duties", "feedback", "questions", "status"
+        ]
+      }
+    },
+    "certifications_or_licenses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cert_license_name": { "type": "string" },
+          "issuer": { "type": "string" },
+          "issue_date": { "type": "string" },
+          "feedback": { "type": "string" },
+          "questions": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "status": { "type": "string" }
+        },
+        "required": [
+          "cert_license_name", "issuer", "issue_date",
+          "feedback", "questions", "status"
+        ]
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "degree": { "type": "string" },
+          "institution": { "type": "string" },
+          "graduation_date": { "type": "string" },
+          "location": { "type": "string" },
+          "feedback": { "type": "string" },
+          "questions": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "status": { "type": "string" }
+        },
+        "required": [
+          "degree", "institution", "graduation_date",
+          "location", "feedback", "questions", "status"
+        ]
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "feedback": { "type": "string" },
+    "questions": {
+      "type": "array",
+      "items": { "type": "string" }
     }
-  ],
-  "certifications_or_licenses": [
-    {
-      "cert_license_name": "",
-      "issuer": "",
-      "issue_date": "",
-      "feedback": "E.g., issue date missing or inferred",
-      "questions": [
-        "Was this certification obtained in Canada or the US?"
-      ],
-      "status": "Acceptable"
-    }
-  ],
-  "education": [
-    {
-      "degree": "",
-      "institution": "",
-      "graduation_date": "",
-      "location": "",
-      "feedback": "E.g., graduation status unclear",
-      "questions": [
-        "Is this degree completed or still in progress?"
-      ],
-      "status": "Review Recommended"
-    }
-  ],
-  "skills": [],
-  "feedback": "Overall comments on the resume parsing, flagging any work history gaps",
-  "questions": [
-    "There are several gaps in the work history — can you clarify?",
-    "Can you confirm if all listed credentials are current?"
-  ],
-  "status": "Urgent Problems"
+  },
+  "required": [
+    "full_name", "experience", "certifications_or_licenses",
+    "education", "skills", "feedback", "questions"
+  ]
 }
-
