@@ -1,0 +1,58 @@
+{
+  "full_name": "",
+  "experience": [
+    {
+      "job_title": "",
+      "employer": "",
+      "unit_or_facility_type": "",
+      "start_date": "",
+      "end_date": "",
+      "location": "",
+      "duties": "",
+      "ai_draft_duties": [
+        "Bullet 1",
+        "Bullet 2",
+        "Bullet 3"
+      ],
+      "feedback": "What was unclear, inferred, missing, or notable",
+      "questions": [
+        "Can you confirm the start and end dates for this role?",
+        "What type of patients did you work with?"
+      ],
+      "status": "Urgent Problems"
+    }
+  ],
+  "certifications_or_licenses": [
+    {
+      "cert_license_name": "",
+      "issuer": "",
+      "issue_date": "",
+      "feedback": "E.g., issue date missing or inferred",
+      "questions": [
+        "Was this certification obtained in Canada or the US?"
+      ],
+      "status": "Acceptable"
+    }
+  ],
+  "education": [
+    {
+      "degree": "",
+      "institution": "",
+      "graduation_date": "",
+      "location": "",
+      "feedback": "E.g., graduation status unclear",
+      "questions": [
+        "Is this degree completed or still in progress?"
+      ],
+      "status": "Review Recommended"
+    }
+  ],
+  "skills": [],
+  "feedback": "Overall comments on the resume parsing, flagging any work history gaps",
+  "questions": [
+    "There are several gaps in the work history — can you clarify?",
+    "Can you confirm if all listed credentials are current?"
+  ],
+  "status": "Urgent Problems"
+}
+
